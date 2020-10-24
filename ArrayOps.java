@@ -18,13 +18,13 @@ public class ArrayOps {
 
   public static int[] sumRows(int[][] matrix) {
     int [] array = new int[(matrix.length)];
-    int [] temp = new int[(matrix[0].length)];
+    int [] temp;
     for (int i = 0; i < matrix.length; i++) {
+      temp = new int [(matrix[i].length)];
       for (int j = 0; j < matrix[i].length; j++) {
         temp[j] = matrix[i][j];
       }
       array[i] = sum(temp);
-      temp = new int [(matrix[i].length)];
     }
     return array;
   }
@@ -46,5 +46,18 @@ public class ArrayOps {
     int [] array = sumRows(arr);
     int total = sum(array);
     return total;
+  }
+
+  public static int[] sumCols(int[][] matrix) {
+    int [] array = new int[(matrix[0].length)];
+    int [] temp;
+    for (int i = 0; i < matrix[0].length; i++) {
+      temp = new int [(matrix.length)];
+      for (int j = 0; j < matrix.length; j++) {
+        temp[j] = matrix[j][i];
+      }
+      array[i] = sum(temp);
+    }
+    return array;
   }
 }
