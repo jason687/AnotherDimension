@@ -15,4 +15,17 @@ public class ArrayOps {
     }
     return ((int) temp);
   }
+
+  public static int[] largestInRows(int[][] matrix) {
+    int [] array = new int[(matrix.length)];
+    int [] temp = new int[(matrix[0].length)];
+    for (int i = 0; i < matrix.length; i++) {
+      for (int j = 0; j < matrix[i].length; j++) {
+        temp[j] = matrix[i][j];
+      }
+      array[i] = largest(temp);
+      temp = new int [(matrix[i].length)];
+    }
+    return array;
+  }
 }
