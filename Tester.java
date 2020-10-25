@@ -7,10 +7,10 @@ public class Tester {
     int [] B = {1, 3, 5};
     int [][] C =  {{1, 2, 3, 4}, {2, 3, 4, 1}, {3, 4, 1, 2}};
     int [][] D = {{1, 1, 1}, {2, 2, 2}, {3, 3, 3}};
-    System.out.println(A.length);
-    System.out.println(A[0].length);
-//    System.out.println(ArrayOps.sum(arr));
-//    System.out.println(Arrays.toString(ArrayOps.largestInRows(A)));
+    int [][] E = {{2, 4, 2}, {2, 2, 2}};
+    System.out.println(ArrayOps.sum(arr));
+    System.out.println(ArrayOps.largest(arr));
+    System.out.println(Arrays.toString(ArrayOps.largestInRows(A)));
     System.out.println(Arrays.toString(ArrayOps.sumRows(A)));
     System.out.println(Arrays.toString(ArrayOps.sumCols(A)));
     System.out.println(ArrayOps.sum(A));
@@ -19,5 +19,7 @@ public class Tester {
     System.out.println(ArrayOps.isRowMagic(D));
     System.out.println(ArrayOps.isColMagic(C));
     System.out.println(ArrayOps.isColMagic(D));
+    System.out.println(ArrayOps.isLocationMagic(E, 0, 1));
+    System.out.println(ArrayOps.isLocationMagic(E, 1, 1));
   }
 }
